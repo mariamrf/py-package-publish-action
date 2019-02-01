@@ -15,12 +15,12 @@ This would also be where you'd set `TWINE_REPOSITORY_URL` if publishing to somet
 
 ### Example workflow
 ```hcl
-workflow "New workflow" {
+workflow "Publish" {
   on = "push"
-  resolves = ["mariamrf/py-package-publish-action@master"]
+  resolves = ["publish-to-pypi"]
 }
 
-action "mariamrf/py-package-publish-action@master" {
+action "publish-to-pypi" {
   needs = "Master"
   uses = "mariamrf/py-package-publish-action@master"
   secrets = ["TWINE_PASSWORD", "TWINE_USERNAME"]
