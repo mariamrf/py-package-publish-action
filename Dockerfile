@@ -1,11 +1,11 @@
 FROM python:3
 
-LABEL "com.github.actions.name"="Publish to PyPI"
+LABEL "com.github.actions.name"="Publish Python Package"
 LABEL "com.github.actions.description"="Package and publish Python modules."
 LABEL "com.github.actions.icon"="upload"
 LABEL "com.github.actions.color"="blue"
 
-LABEL "repository"="http://github.com/mariamrf/pypi-publish-action"
+LABEL "repository"="http://github.com/mariamrf/py-package-publish-action"
 LABEL "maintainer"="Mariam Maarouf <mrf.mariam@gmail.com>"
 
 RUN apt-get update
