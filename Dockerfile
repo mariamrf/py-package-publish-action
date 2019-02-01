@@ -8,7 +8,6 @@ LABEL "com.github.actions.color"="blue"
 LABEL "repository"="http://github.com/mariamrf/pypi-publish-action"
 LABEL "maintainer"="Mariam Maarouf <mrf.mariam@gmail.com>"
 
-ENV PYTHON_VERSION 3.7.0
 RUN apt-get update
 RUN apt-get install -y jq
 
