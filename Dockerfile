@@ -2,7 +2,7 @@ FROM python:3
 
 LABEL "com.github.actions.name"="Publish Python Package"
 LABEL "com.github.actions.description"="Package and publish Python modules."
-LABEL "com.github.actions.icon"="upload"
+LABEL "com.github.actions.icon"="package"
 LABEL "com.github.actions.color"="blue"
 
 LABEL "repository"="http://github.com/mariamrf/py-package-publish-action"
