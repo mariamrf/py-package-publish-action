@@ -1,4 +1,4 @@
-# Py Package Publish
+# Publish Python Package
 A Github Action to publish your Python package to PyPI or any other repository. Supports any Python version you'll give it (that is also supported by [pyenv](https://github.com/pyenv/pyenv)).
 
 ## Use
