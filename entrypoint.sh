@@ -1,8 +1,17 @@
 #!/bin/bash
 
+install_python_version(){
+	pyenv install $INPUT_PYTHON_VERSION
+	pyenv global $INPUT_PYTHON_VERSION
+}
+
+install_build_tools(){
+	pip install --upgrade setuptools wheel twine
+}
+
 go_to_build_dir(){
-	if [ ! -z $SUBDIR ]; then
-		cd $SUBDIR
+	if [ ! -z $INPUT_SUBDIR ]; then
+		cd $INPUT_SUBDIR
 	fi
 }
 
@@ -18,6 +27,8 @@ upload_package(){
 	twine upload dist/*
 }
 
+install_python_version
+install_build_tools
 go_to_build_dir
 check_if_setup_file_exists
 upload_package
