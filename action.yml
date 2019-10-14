@@ -12,6 +12,9 @@ inputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
+  env:
+    PYTHON_VERSION: ${{ inputs.python_version }}
+    SUBDIR: ${{ inputs.subdir }}
 branding:
   icon: 'package'
   color: 'yellow'

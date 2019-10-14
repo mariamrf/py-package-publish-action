@@ -1,8 +1,8 @@
 #!/bin/bash
 
 go_to_build_dir(){
-	if [ ! -z $INPUT_SUBDIR ]; then
-		cd $INPUT_SUBDIR
+	if [ ! -z $SUBDIR ]; then
+		cd $SUBDIR
 	fi
 }
 
