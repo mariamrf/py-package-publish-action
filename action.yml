@@ -1,0 +1,17 @@
+name: py-package-publish
+author: Mariam Maarouf
+description: Package and publish Python modules.
+inputs:
+  python_version:
+    description: a Python version that is supported by pyenv
+    required: true
+    default: '3.7.0'
+  subdir:
+    description: if your setup.py (and therefore, your entire package) is in a subdirectory of your repo, put the path to it here.
+    required: false
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  icon: 'package'
+  color: 'yellow'
