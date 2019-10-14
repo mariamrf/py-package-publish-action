@@ -18,7 +18,7 @@ This would also be where you'd set `TWINE_REPOSITORY_URL` if publishing to somet
 
 ### Example workflow
 ```yaml
-name: publish
+name: publish-pypi
 
 on:
   push:
@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish Python Package
-      uses: mariamrf/py-package-publish-action@v2
+      uses: mariamrf/py-package-publish-action@v2.0.0
       with:
         python_version: '3.6.0'
       env:
