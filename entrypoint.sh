@@ -10,7 +10,6 @@ install_build_tools(){
 }
 
 go_to_build_dir(){
-	ls
 	if [ ! -z $INPUT_SUBDIR ]; then
 		cd $INPUT_SUBDIR
 	fi
