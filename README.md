@@ -33,7 +33,7 @@ jobs:
     steps:
     - uses: actions/checkout@master
     - name: Publish Python Package
-      uses: mariamrf/py-package-publish-action@v2.0.0
+      uses: mariamrf/py-package-publish-action@v1.0.0
       with:
         python_version: '3.6.0'
       env:
