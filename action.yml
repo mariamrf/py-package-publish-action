@@ -3,9 +3,12 @@ author: Mariam Maarouf
 description: Package and publish Python modules.
 inputs:
   python_version:
-    description: a Python version that is supported by pyenv
+    description: a Python version that is supported by pyenv.
     required: true
     default: '3.7.0'
+  pip_version:
+    description: the pip version to use (defaults to newest).
+    required: false
   subdir:
     description: if your setup.py (and therefore, your entire package) is in a subdirectory of your repo, put the path to it here.
     required: false
@@ -14,6 +17,7 @@ runs:
   image: 'Dockerfile'
   args:
     - ${{ inputs.python_version }}
+    - ${{ inputs.pip_version }}
     - ${{ inputs.subdir }}
 branding:
   icon: 'package'
