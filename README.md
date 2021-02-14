@@ -14,6 +14,7 @@ This would also be where you'd set `TWINE_REPOSITORY_URL` if publishing to somet
 
 ### Inputs
 - `python_version`: a Python version that is supported by [pyenv](https://github.com/pyenv/pyenv). For example: `3.7.0`.
+- `pip_version` (optional): the pip version to use (defaults to newest), some packages may require different pip versions.
 - `subdir` (optional): if your `setup.py` (and therefore, your entire package) is in a subdirectory of your repo, put the path to it here. This will just change the working directory to the `SUBDIR` before running the rest of the script.
 
 ### Example workflow
@@ -39,5 +40,4 @@ jobs:
       env:
         TWINE_PASSWORD: ${{ secrets.TWINE_PASSWORD }}
         TWINE_USERNAME: ${{ secrets.TWINE_USERNAME }}
-
 ```
